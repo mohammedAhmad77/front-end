@@ -1,0 +1,213 @@
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin main-background {
+  background: linear-gradient(
+    -35deg,
+    $white 0%,
+    $white 35%,
+    $primary 35%,
+    $primary 70%,
+    $white 70%,
+    $white 100%
+  );
+}
+
+@mixin bar-border {
+  &-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after {
+      content: "";
+      height: 0.1rem;
+      width: 0;
+      bottom: 0px;
+      position: absolute;
+      background: $primary;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      right: 0%;
+    }
+  }
+
+  &-input:focus + &-bar::after {
+    width: 100%;
+  }
+}
+
+
+
+@mixin basic-input {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: $primary;
+  border-bottom: $mainBorder;
+  font-size: 1.5rem;
+
+  &::placeholder {
+    color: $primary;
+  }
+  &:focus {
+    color: $dark;
+    background: none;
+    border: none;
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  &-valid {
+    border-bottom: .1rem solid $validation;
+  }
+  
+}
+
+@mixin btn-style {
+  &__button-field {
+
+    &-btn {
+      padding: 0.75rem 4rem;
+      background-color: $primary;
+      color: $white;
+      border-radius: 0.4rem;
+      font-size: 1.7rem;
+      cursor: unset;
+
+      animation: moveInBottom 0.2s ease-out;
+      animation-fill-mode: backwards;
+      transition: all 0.1s ease-in-out;
+
+
+      &-enabled {
+        &:hover {
+          color: $white;
+          transform: translateY(-3px);
+          box-shadow: $btnBoxShadow;
+          cursor: pointer;
+        }
+        &:active {
+          transform: translateY(-1px);
+          box-shadow: none;
+        }
+      }
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        color: $white;
+      }
+     
+
+      
+    }
+  }
+}
+
+@mixin PasswordIcon {
+  &-icon {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 2%;
+    top: 15%;
+    transition: all 0.2s ease-in-out;
+
+  
+
+    & > svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $primary;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+}
+}
+
+
+
+
+
+
+//------------------------------------ pseudo element
+
+@mixin dropDownBar {
+  content:  "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: solid 1rem;
+  border-color: transparent transparent $secondary transparent;
+  top: 0;
+  transform: translateY(-94%);
+}
+
+
+
+
+
+
+
+//---- form validation 
+@mixin form-validation {
+  color:$validation;
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+//---- scroll bar
+@mixin scroll-y-bar {
+  &::-webkit-scrollbar {
+    width: .6rem;
+    background-color: $white;
+    cursor: pointer;
+    border-radius: .25rem 0 0 .25rem;
+    border-radius:0 .25rem .25rem 0;
+
+
+    &:active,
+    &:hover {
+        background-color:$secondary;
+    }
+    
+}
+
+&::-webkit-scrollbar-thumb {
+    background-color: lighten($primary, 5);
+    border-radius:0 .25rem .25rem 0;
+
+}
+}
+
+@mixin scroll-x-bar {
+  &::-webkit-scrollbar {
+    height: .6rem;
+    background-color: $white;
+    border-radius: .25rem;
+    cursor: pointer;
+
+    &:active,
+    &:hover {
+        background-color:$secondary;
+    }
+    
+}
+
+&::-webkit-scrollbar-thumb {
+    background-color: lighten($primary, 5);
+    border-radius: .25rem;
+
+}
+}
+

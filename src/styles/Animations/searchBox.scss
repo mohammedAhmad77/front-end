@@ -1,0 +1,52 @@
+
+.searchBox-enter {
+	opacity: 0;
+	height: 0;
+	transition: all 0.3s;
+}
+
+.searchBox-enter-active {
+	opacity: 1;
+	height: 3rem;
+	transition: all 0.3s;
+}
+
+.searchBox-enter-done {
+	opacity: 1;
+	height: 3rem;
+	transition: all 0.3s;
+}
+
+.searchBox-appear {
+	opacity: 1;
+	height: 0;
+}
+
+.searchBox-appear-active {
+	opacity: 1;
+	height: 3rem;
+}
+
+.searchBox-appear-done {
+	opacity: 1;
+	height: 3rem;
+	transition: all 0.3s;
+}
+
+.searchBox-exit {
+	opacity: 1;
+	height: 3rem;
+	transition: all 0.3s;
+}
+
+.searchBox-exit-active {
+	opacity: 0;
+	height: 0;
+	transition: all 0.3s;
+}
+
+.searchBox-exit-done {
+	opacity: 0;
+	height: 0;
+	transition: all 0.3s;
+}
