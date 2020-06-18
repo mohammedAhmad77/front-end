@@ -1,0 +1,296 @@
+
+.sign-up {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+
+    &__form {
+        margin-bottom: .25rem;
+
+        &-gender-validation {
+            display: flex;
+            padding-right: 0.75rem;
+            font-size: 1.5rem;
+            color:$validation;
+            font-weight: 600;
+
+        }
+
+        &__input-content {
+            position: relative;
+        }
+
+        &__content {
+            justify-content: space-around;
+            
+            &--gender {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            &-input {
+                @include basic-input;
+
+                &--confirm-password {
+                    margin-top:.25rem;
+                }
+
+            
+            }
+            &-input-valid ~ &-bar {
+                &::after {
+                    background-color: $validation;
+                }
+            }
+
+            &-password {
+                position: relative;
+            }
+           
+
+            &-valid {
+                display: flex;
+                width: 100%;
+                color:$validation;
+                font-size: 1.13rem;
+            }
+            @include bar-border;
+        }
+
+
+        &__label {
+            display:flex;
+            font-size: 1.5rem;
+            color:$dark;
+            margin-bottom: 0;
+        }
+
+
+        &__selection {
+
+            &-title {
+                display: flex;
+                font-size: 1.5rem;
+                color: $dark;
+                font-weight: 700;
+            }
+
+            &-container {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem; 
+                
+                &__select {
+                    position: relative;
+
+
+                    &-field {
+                        border: $mainBorder;
+                        border-radius: .3rem;
+                        color:$primary;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        width:10rem;
+                        font-size: 1.2rem;
+                        padding: 10px 0;
+                        cursor: pointer;
+                        
+                        &.active {
+                            border: none;
+                            border-bottom: .1rem solid $primary;
+
+                        }
+                        
+
+                        &--validate {
+                            border: .1rem solid $validation;
+                        }
+                    }
+
+                    
+
+                    &-list {
+                        color:$primary;
+                        overflow: hidden;
+                        border-radius: .3rem;
+                        background-color: #FFF;
+                        border: $mainBorder;
+                        max-height: 0;
+                        opacity:0;
+                        font-size: 1.2rem;
+                        position: absolute;
+                        left: 0;
+                        top:-22rem;
+                        width:10rem;
+                        opacity: 1;
+                        max-height: 21rem;
+                        overflow-y: scroll;
+                        cursor: pointer;
+                        direction: ltr;
+
+                                                
+                        &::-webkit-scrollbar {
+                            width: 1rem;
+                            background-color: $white;
+                            border-radius:0 .1rem 0 .1rem;
+
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: $primary;
+                            border-radius:0 .1rem 0 .1rem;
+                        }
+
+                        &-item {
+                        
+                            padding: 10px 0;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                              
+                            &:hover {
+                                background-color: $white;
+                            }
+
+                            
+                              
+                        }
+                        &-radio {
+                            display: none;
+                        }
+
+                        &-label {
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+        }
+        
+        
+    &__gender {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        padding: .5rem 1.5rem;
+
+        &-box {
+            display: flex;
+
+            &-checkbox {
+
+                &-input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                &-input:checked ~ &-bar-checked {
+                    border-radius: 5px;
+                    -webkit-transform: rotate(0deg) scale(1);
+                    -ms-transform: rotate(0deg) scale(1);
+                    transform: rotate(0deg) scale(1);
+                    cursor: pointer;
+                    border-radius: 50%;
+                    border: 2px solid $secondary;
+
+                    &::after {
+                        -webkit-transform: rotate(0deg) scale(1);
+                        -ms-transform: rotate(0deg) scale(1);
+                        transform: rotate(0deg) scale(1);
+                        left: 2px;
+                        top: 2px;
+                        width: 6px;
+                        opacity: 1;
+                        height: 12px;
+                        border: solid $primary;
+                        border-width: 6px;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        border: solid $primary;
+                        border-width: 6px;
+                    }
+
+                    &::before {
+                        border-radius: 50%;
+                    }
+                }
+
+    
+
+
+                &-bar {
+                    position: absolute;
+                    height: 20px;
+                    width: 20px;
+                    background-color: transparent;
+                    border-radius: 5px;
+                    transition: all 0.3s ease-out;
+                    -webkit-transition: all 0.3s ease-out;
+                    -moz-transition: all 0.3s ease-out;
+                    -ms-transition: all 0.3s ease-out;
+                    -o-transition: all 0.3s ease-out;
+                    border: 2px solid #FFFFFF;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    border: 2px solid $secondary;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        left: 2px;
+                        top: 2px;
+                        height: 0px;
+                        width: 0px;
+                        border-radius: 5px;
+                        border: solid $primary;
+                        border-width: 6px;
+                        -webkit-transform: rotate(0deg) scale(0);
+                        -ms-transform: rotate(0deg) scale(0);
+                        transform: rotate(0deg) scale(0);
+                        transition: all 0.3s ease-out;
+                        -webkit-transition: all 0.3s ease-out;
+                        -moz-transition: all 0.3s ease-out;
+                        -ms-transition: all 0.3s ease-out;
+                        -o-transition: all 0.3s ease-out;
+                        border-radius: 50%;
+                    }
+
+                    &::before {
+                        border-radius: 50%;
+                        border: 2px solid $secondary;
+                    }
+                }
+            }
+
+            &-title {
+                font-size: 1.25rem;
+                padding-right: 4rem;
+            }
+        }
+    }
+
+    @include PasswordIcon;
+
+    }
+
+    &__button-field {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+    }
+
+    @include btn-style;
+}
+
+

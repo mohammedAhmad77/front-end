@@ -1,0 +1,51 @@
+.switch-controller {
+  box-shadow: $btnBoxShadow;
+  &__btn {
+    font-weight: bold;
+    background-color: $white;
+    color: $dark;
+    box-shadow: $secondaryBoxShadow;
+    padding: 0.75rem 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    // animation: moveInBottom 0.5s ease-out;
+    // animation-fill-mode: backwards;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      outline: 0;
+      box-shadow: $secondaryBoxShadow;
+    }
+    &:hover {
+      // color: $dark;
+      text-decoration: none;
+    }
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: $secondaryBoxShadow;
+    }
+  }
+  .active {
+    background-color: $secondary;
+    color: $dark;
+
+    &:hover {
+      // color: $white;
+    }
+  }
+}
+
+.btn-group > .btn-group:not(:first-child) > .switch-controller__btn,
+.btn-group > .switch-controller__btn:not(:first-child) {
+  border-radius: 0.3rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn-group:not(:last-child) > .switch-controller__btn,
+.btn-group > .switch-controller__btn:not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0.3rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+

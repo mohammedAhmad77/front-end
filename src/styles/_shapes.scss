@@ -1,0 +1,19 @@
+//--------------- background
+$hoverSecondaryLight: rgba($secondary, 0.5);
+
+//---------------- box shadow
+$blackBoxShadow: -0.7rem 0.7rem 1.5rem rgba($dark, 0.3);
+$btnBoxShadow: -0.2rem 0.2rem 0.8rem rgba($dark, 0.3);
+$primaryBoxShadow: 0 3px 7px -5px $primary;
+$secondaryBoxShadow: -0.1rem 0.1rem 1rem lighten($secondary, 5);
+$primaryLightBoxshadow: 0px 0px 12px -2px rgba(20, 40, 80, 0.5);
+$mainBoxShadow: -0.1rem 0.1rem 0.5rem darken($secondary, 5);
+$dropDownBoxShadow: -0.2rem 0.2rem 0.8rem darken($secondary, 5);
+
+//---------------- border radius
+$borderRadius: 0.3rem;
+
+//---------------- border
+$secondaryBorder: 0.1rem solid darken($secondary, 5);
+$mainBorder:.1rem solid $secondary;
+
