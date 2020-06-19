@@ -1,0 +1,14 @@
+.albums {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10rem;
+    padding: 5rem;
+}
+
+
+@media only screen and (max-width: 665px) {
+    .albums {
+        margin: 0;
+       align-items: center;
+    }
+}

@@ -1,0 +1,133 @@
+.album {
+    border: .1rem solid rgba(105, 114, 118, .5);
+    border-radius: .3rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem rgb(221, 227, 231);
+}
+
+.album:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+}
+
+.album-photos {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.album-photos img {
+    object-fit: cover;
+    border-radius: .3rem;
+}
+
+.album-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.album-info h4 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.album-info span {
+    margin-top: 1rem;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    color:var(--primary);
+}
+
+.album-info span strong {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.album-link {
+
+}
+
+.album-link a {
+    color: var(--link);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    transition:all .15s linear;
+    text-transform: capitalize;
+}
+
+.album-link a:active {
+    color: rgba(100, 179, 244, .7);
+}
+
+
+@media only screen and (max-width: 960px) {
+    .album-info h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .album-info span {
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media only screen and (max-width:720px) {
+    .album {
+        width: 40rem;
+     }
+     .album-photos {
+         width: 100%;
+         flex-direction: column;
+      }
+ 
+     .album-details {
+         width: 100%;
+         margin-top: 1rem;
+     }
+ 
+     .album-info {
+         width: 100%;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+     }
+     .album-info span {
+         font-size: 1.5rem;
+         font-weight: 500;
+         margin-top: 0;
+     }
+ 
+     .album-link {
+         width: 100%;
+         margin-top: 1rem;
+         font-size: 1.4rem;
+     }
+}
+
+@media only screen and (max-width:665px) { 
+    .album {
+        width: 40rem;
+     }
+    
+}
+

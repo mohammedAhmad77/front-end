@@ -1,0 +1,13 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10rem;
+    padding: 5rem;
+}
+
+@media only screen and (max-width: 665px) {
+    .posts {
+        margin: 0;
+       align-items: center;
+    }
+}
